@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    background:#ECFDF5;
+    color: #2B283A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/************************
+ * LAYOUTS
+ ************************/
+.container{
+    width: 90%;
+    min-width: 300px;
+    max-width: 530px;
+    padding: 0.2em 2em 2em 2em;
+    border-radius: 4px;
+}
+
+.container2{ margin: 0 auto 5em auto }
+
+.lineSeparator{
+    border-top: 1px solid #2F3E53;
+    margin: 2em auto 1.4em auto;
+    text-align: center;
+}
+
+.passwordLength{
+    text-align: center;
+    font-size: 15px;
+    width: 45px;
+    color: #10B981;
+    margin-left: 6px;
+    border-radius: 6px;
+    border-style: none;
+    background: none;
+    border: 2px solid #10B981;
+}
+
+.passwordDisplay{
+    min-height: 35px;
+    text-align: center;
+    background-color: #273549;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #55F991;
+    margin: 5px auto;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.container2, .lineSeparator, .passwordDisplay {width:100%}
+
+.fex{ flex-direction: row }
+
+.flex2{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.flex, .flex2 {display: flex}
+
+
+/************************
+ * TYPOGRAPHY
+ ************************/
+h1{
+    margin: 0;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.support-text{
+    margin: 10px 0 40px 0;
+    line-height: 18px;
+    font-weight: 520;
+}
+
+.copy-notification{
+    margin: 6px 0 0 0;
+    color: #55F991;
+    font-weight: 300;
+    visibility: hidden;
+}
+
+.colorSpan{
+    color: #10B981;
+    animation-name: colorChange;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction:alternate-reverse;
+}
+
+.darkMode{
+    background:#1F2937;
+    color: #fff;
+}
+
+.change-mode-icon{
+    width: 35px;
+    cursor: pointer;
+}
+
+#screen-tip{
+    color: #10B981;
+    background-color: #fff;
+    padding: 3px;
+    font-size: 13px;
+    display: none;
+}
+
+
+/************************
+ * BUTTONS
+ ************************/
+.btn{
+    width: 169px;
+    background: #10B981;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: inherit;
+    padding: 7px 10px 7px 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border-style: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 3px 2px #10B981;
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+
+/************************
+ * MEDIA QUERIES
+ ************************/
+@media(min-width: 500px){
+    .inputWrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .passwordDisplay + .passwordDisplay{
+        margin-left: 12px
+    }
+}
+
+@media(min-width: 800px){
+    h1{
+        font-size: 2.6rem;
+        line-height: 37px;
+    }
+    
+    .support-text{
+        font-size: 1.1rem;
+    }
+
+    .btn{
+        font-size: 13.5px;
+    }
+}
+
+@keyframes colorChange {
+    0%{
+        color: #10B981;
+    }
+
+    55%{
+        color: magenta;
+    }
+
+    100%{
+        color: #10B981;
+    }
+}

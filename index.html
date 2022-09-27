@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container2">
+            <img src="./images/light_mode.png" id="light-icon" class="change-mode-icon" alt="light-mode">
+            <span id="screen-tip">switch to dark mode</span>
+        </div>
+        <h1>Generate a <br><span class="colorSpan">random password</span></h1>
+        <p class="support-text">Never use an insecure password again.</p>
+        <div class="flex">
+            <button type="button" class="btn flex2"><span><img src="./images/Icon2.png" alt="icon"></span>Generate passwords</button>
+            <input type="number" min="1" max="15" class="passwordLength">
+        </div>
+        <div class="lineSeparator">
+            <p class="copy-notification">Password Copied!</p>
+        </div>
+        <div class="inputWrapper">
+            <div class="passwordDisplay" id="passwordDisplay1"></div>
+            <div class="passwordDisplay" id="passwordDisplay2"></div>
+        </div>
+        <div class="inputWrapper">
+            <div class="passwordDisplay" id="passwordDisplay3"></div>
+            <div class="passwordDisplay" id="passwordDisplay4"></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
